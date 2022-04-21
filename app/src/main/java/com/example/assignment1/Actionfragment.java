@@ -3,6 +3,8 @@ package com.example.assignment1;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +19,8 @@ import android.widget.Button;
 public class Actionfragment extends Fragment {
     Button input;
     Button calc;
-
+    //private FragmentManager fragmentManager;
+    //private InputDataFragment inputDataFragment;
     public Actionfragment() {
         // Required empty public constructor
     }
@@ -31,6 +34,12 @@ public class Actionfragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        input.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     @Override
@@ -41,16 +50,5 @@ public class Actionfragment extends Fragment {
         input=view.findViewById(R.id.inputbtn);
         calc=view.findViewById(R.id.Calcbtn);
         return view;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        input.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
     }
 }
