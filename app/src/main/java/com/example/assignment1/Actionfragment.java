@@ -42,4 +42,15 @@ public class Actionfragment extends Fragment {
         calc=view.findViewById(R.id.Calcbtn);
         return view;
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        input.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+    }
 }
